@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center; color: rgba(182, 25, 221, 0.849);">Создайте свой пост!</h1>
+<div class="post" style="color: rgba(196, 0, 236, 0.822);">
+    <form method="post">
+        {% csrf_token %}
+        {{form.title}}
+        <br>
+        {{form.post}}
+        <br>
+        <button type="submit" class="btn btn-success" style="width: 100%; text-align: center; background: rgba(218, 67, 218, 0.675); border: 1px solid rgb(221, 38, 221); ">Добавить</button>
+    </form>
+{% endblock %}

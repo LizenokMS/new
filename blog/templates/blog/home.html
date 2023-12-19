@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %} 
+ 
+{% block title %} 
+{{title}} 
+{% endblock %} 
+ 
+{% block content %} 
+<div class="alert mt-2"> 
+    <h1 style=" color: #a800fcba; text-align: center;">Главная</h1> 
+</div> 
+{% if posts %} 
+{% for el in posts %} 
+<div class="alert alert-warning mt-2" style="background:  #d182f188; border: 2px solid #a303e2d2;"> 
+    <h3 style="color: #650480c6;">{{el.title}}</h3> 
+    <p style="color: #660d86;">{{el.post}}</p> 
+</div> 
+{% endfor %} 
+{% else %} 
+<p style="color: #a00cc5;">Нет записей</p> 
+{% endif %} 
+{% endblock %}
